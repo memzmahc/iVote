@@ -56,31 +56,31 @@ public class profile extends AppCompatActivity implements View.OnClickListener{
         intent.setAction(Intent.ACTION_GET_CONTENT);
         startActivityForResult(Intent.createChooser(intent,"Select Image"),PICK_IMAGE_REQUEST);
     }
-    private void uploadfile(){
-        if(filepath != null) {
-
-            StorageReference riversRef = storageReference.child("images/profile.jpg");
-
-            riversRef.putFile(filepath)
-                    .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                        @Override
-                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                            // Get a URL to the uploaded content
-                            Uri downloadUrl = taskSnapshot.getDownloadUrl();
-                        }
-                    })
-                    .addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception exception) {
-                            // Handle unsuccessful uploads
-                            // ...
-                        }
-                    });
-        }
-        else{
-
-        }
-    }
+//    private void uploadfile(){
+//        if(filepath != null) {
+//
+//            StorageReference riversRef = storageReference.child("images/profile.jpg");
+//
+//            riversRef.putFile(filepath)
+//                    .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+//                        @Override
+//                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+//                            // Get a URL to the uploaded content
+//                            Uri downloadUrl = taskSnapshot.getDownloadUrl();
+//                        }
+//                    })
+//                    .addOnFailureListener(new OnFailureListener() {
+//                        @Override
+//                        public void onFailure(@NonNull Exception exception) {
+//                            // Handle unsuccessful uploads
+//                            // ...
+//                        }
+//                    });
+//        }
+//        else{
+//
+//        }
+//    }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -102,8 +102,10 @@ public class profile extends AppCompatActivity implements View.OnClickListener{
     public void onClick(View v) {
         if(v == btnchoose){
         showfilechooser();
-        }else if(v == btnupload){
-            uploadfile();
         }
+//        else if(v == btnupload)
+//        {
+//            uploadfile();
+//        }
     }
 }

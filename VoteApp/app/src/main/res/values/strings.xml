@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">VoteApp</string>
+    <string name="app_name">iVote</string>
     <string name="title_activity_mainlogin">mainlogin</string>
     <string name="title_activity_navhome">navhome</string>
 

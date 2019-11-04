@@ -12,10 +12,12 @@ import android.view.View;
 //import android.support.v7.app.ActionBarDrawerToggle;
 //import android.support.v7.app.AppCompatActivity;
 //import android.support.v7.widget.Toolbar;
+
+import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
-import android.widget.Toolbar;
+//import android.widget.Toolbar;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -25,8 +27,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class navhome extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class navhome extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private TextView tvemail;
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
