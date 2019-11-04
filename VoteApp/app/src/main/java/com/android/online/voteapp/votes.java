@@ -1,8 +1,10 @@
-package com.example.laksh_pc.voteapp;
-
-import android.support.v7.app.AppCompatActivity;
+package com.android.online.voteapp;
+//
+//import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

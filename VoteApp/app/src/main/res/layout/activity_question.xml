@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="@drawable/back10"
     android:layout_height="match_parent"
-    tools:context="com.example.laksh_pc.voteapp.question">
+    tools:context="com.android.online.voteapp.question">
 
     <TextView
         android:id="@+id/textView13"

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bk3"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.laksh_pc.voteapp.navhome"
+    tools:context="com.android.online.voteapp.navhome"
     tools:showIn="@layout/app_bar_navhome">
 
     <Button

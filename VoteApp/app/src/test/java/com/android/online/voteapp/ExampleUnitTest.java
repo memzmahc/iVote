@@ -1,4 +1,4 @@
-package com.example.laksh_pc.voteapp;
+package com.android.online.voteapp;
 
 import org.junit.Test;
 
