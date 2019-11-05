@@ -33,7 +33,7 @@ public class pres extends AppCompatActivity {
         {
             case R.id.rb1:
                 if(checked) {
-                    finalresult.setText("Barack Obama");
+                    finalresult.setText("Sabul Ian");
                     finalresult.setEnabled(true);
                 }
                 else
@@ -43,7 +43,7 @@ public class pres extends AppCompatActivity {
                 break;
             case R.id.rb2:
                 if(checked) {
-                    finalresult.setText("Donald Trump");
+                    finalresult.setText("John Theuri");
                     finalresult.setEnabled(true);
                 }
                 else
@@ -56,12 +56,12 @@ public class pres extends AppCompatActivity {
     }
     public void sendvote(View view){
         String n = finalresult.getText().toString();
-        if (n == "Barack Obama") {
+        if (n == "Sabul Ian") {
 
-            databaseReference.child("Barack Obama").push().setValue(n);
+            databaseReference.child("Sabul Ian").push().setValue(n);
         }
         else{
-            databaseReference.child("Donald Trump").push().setValue(n);
+            databaseReference.child("John Theuri").push().setValue(n);
         }
         Intent startnew = new Intent(this,gov.class);
         startActivity(startnew);

@@ -32,7 +32,7 @@ public class gov extends AppCompatActivity {
         {
             case R.id.rb9:
                 if(check){
-                    result.setText("Venkaiah Naidu");
+                    result.setText("Mercy Cheptoo");
                     result.setEnabled(true);
                 }
                 else{
@@ -41,7 +41,7 @@ public class gov extends AppCompatActivity {
                 break;
             case R.id.rb10:
                 if(check){
-                    result.setText("Banwarilal");
+                    result.setText("Mike Omondi");
                     result.setEnabled(true);
                 }
                 else {
@@ -54,12 +54,12 @@ public class gov extends AppCompatActivity {
     }
     public void finalbtn(View view){
         String y = result.getText().toString();
-        if(y == "Venkaiah Naidu"){
-            databaseReference.child("Venkaiah Naidu").push().setValue(y);
+        if(y == "Mercy Cheptoo"){
+            databaseReference.child("Mercy Cheptoo").push().setValue(y);
         }
         else
         {
-            databaseReference.child("Banwarilal").push().setValue(y);
+            databaseReference.child("Mike Omondi").push().setValue(y);
         }
         Intent finalact = new Intent(this,success.class);
         startActivity(finalact);

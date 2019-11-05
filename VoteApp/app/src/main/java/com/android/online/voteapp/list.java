@@ -17,7 +17,7 @@ public class list extends AppCompatActivity {
 
     ListView mlistview;
     int[] images = {R.drawable.pres,R.drawable.gov};
-    String[] names = {"President","Governor"};
+    String[] names = {"President","Sec General"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
