@@ -42,7 +42,7 @@
             android:layout_marginBottom="55dp"
             android:layout_weight="1"
             android:onClick="SelectPres"
-            android:text="BARACK OBAMA"
+            android:text="Sabul Ian"
             android:textAppearance="@style/TextAppearance.AppCompat.Button" />
 
         <RadioButton
@@ -54,7 +54,7 @@
             android:layout_marginEnd="43dp"
             android:layout_weight="1"
             android:onClick="SelectPres"
-            android:text="DONALD TRUMP"
+            android:text="John Theuri"
             android:textAppearance="@style/TextAppearance.AppCompat.Button" />
     </RadioGroup>
 
