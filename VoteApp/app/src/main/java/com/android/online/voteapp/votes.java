@@ -42,7 +42,7 @@ public class votes extends AppCompatActivity {
         mdata1.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                long size = dataSnapshot.child("Barack Obama").getChildrenCount();
+                long size = dataSnapshot.child("Sabul Ian").getChildrenCount();
                 String output = String.valueOf(size);
                 status1.setText(output);
             }
@@ -55,7 +55,7 @@ public class votes extends AppCompatActivity {
         mdata2.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                long size1 = dataSnapshot.child("Donald Trump").getChildrenCount();
+                long size1 = dataSnapshot.child("John Theuri").getChildrenCount();
                 String output1 = String.valueOf(size1);
                 status2.setText(output1);
             }
@@ -68,7 +68,7 @@ public class votes extends AppCompatActivity {
         mdata3.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                long size2 = dataSnapshot.child("Venkaiah Naidu").getChildrenCount();
+                long size2 = dataSnapshot.child("Mercy Cheptoo").getChildrenCount();
                 String output2 = String.valueOf(size2);
                 status3.setText(output2);
             }
@@ -81,7 +81,7 @@ public class votes extends AppCompatActivity {
         mdata4.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                long size3 = dataSnapshot.child("Banwarilal").getChildrenCount();
+                long size3 = dataSnapshot.child("Mike Omondi").getChildrenCount();
                 String output3 = String.valueOf(size3);
                 status4.setText(output3);
             }
