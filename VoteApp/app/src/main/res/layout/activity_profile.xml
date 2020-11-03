@@ -25,7 +25,8 @@
         android:onClick="btnbrowse_click"
         android:layout_below="@+id/imgview"
         android:layout_toEndOf="@+id/choosebtn"
-        android:layout_marginTop="62dp" />
+        android:layout_marginTop="62dp"
+        tools:ignore="OnClick" />
 
     <Button
         android:id="@+id/choosebtn"

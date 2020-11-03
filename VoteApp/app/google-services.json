@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "277269367809",
-    "firebase_url": "https://ivote-c8d95.firebaseio.com",
-    "project_id": "ivote-c8d95",
-    "storage_bucket": "ivote-c8d95.appspot.com"
+    "project_number": "8731362877",
+    "firebase_url": "https://voteapp-76567.firebaseio.com",
+    "project_id": "voteapp-76567",
+    "storage_bucket": "voteapp-76567.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:277269367809:android:ebc843e84f70afd2378400",
+        "mobilesdk_app_id": "1:8731362877:android:88fd479830ce7e0e3bcc54",
         "android_client_info": {
           "package_name": "com.android.online.voteapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "277269367809-3uev0i7atrnhd20pd187ahauvhp2h3hm.apps.googleusercontent.com",
+          "client_id": "8731362877-4m5tusjii9gb5o8p38ne2114i7ekum6o.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC0e0ZY_roMvy8z7i9itMSZgCu22BorUHc"
+          "current_key": "AIzaSyA7zIeRXSyMCMGWdpfcHXQVNjizatdT4wI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "277269367809-3uev0i7atrnhd20pd187ahauvhp2h3hm.apps.googleusercontent.com",
+              "client_id": "8731362877-4m5tusjii9gb5o8p38ne2114i7ekum6o.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
