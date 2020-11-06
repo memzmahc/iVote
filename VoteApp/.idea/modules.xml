@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/VoteApp.iml" filepath="$PROJECT_DIR$/.idea/modules/VoteApp.iml" group="VoteApp" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/VoteApp.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/VoteApp.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="VoteApp/app" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/iVote.VoteApp.iml" filepath="$PROJECT_DIR$/.idea/modules/iVote.VoteApp.iml" />
     </modules>
   </component>

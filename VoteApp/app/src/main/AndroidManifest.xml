@@ -6,7 +6,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS"
+    <uses-permission
+        android:name="android.permission.MANAGE_DOCUMENTS"
         tools:ignore="ProtectedPermissions" />
 
     <application
@@ -16,41 +17,38 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.android.online.voteapp.login">
+        <activity
+            android:name=".Candidate.CandidateMainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".login"
+            android:theme="@style/AppThemeAction">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.android.online.voteapp.registration" />
-        <activity android:name="com.android.online.voteapp.authenticate" />
-        <activity android:name="com.android.online.voteapp.home" />
+        <activity android:name=".registration"
+            android:theme="@style/AppThemeAction"/>
+        <activity android:name=".authenticate"
+            android:theme="@style/AppThemeAction"/>
+        <activity android:name=".home" />
         <activity
-            android:name="com.android.online.voteapp.navhome"
+            android:name=".navhome"
             android:label="@string/title_activity_navhome"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.android.online.voteapp.list"
+            android:name=".list"
             android:exported="true" />
         <activity
-            android:name="com.android.online.voteapp.pres"
+            android:name=".pres"
             android:exported="true" />
-        <activity android:name="com.android.online.voteapp.success" />
-        <activity android:name="com.android.online.voteapp.profile" />
-        <activity android:name="com.android.online.voteapp.question" />
-        <activity android:name="com.android.online.voteapp.quesview" />
-        <activity android:name="com.android.online.voteapp.gov" />
-        <activity android:name="com.android.online.voteapp.votes"/>
-<!--        <service-->
-<!--            android:name=".periodic.PeriodicTaskService"-->
-<!--            android:enabled="true"-->
-<!--            android:exported="true"-->
-<!--            android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY" />-->
-<!--            </intent-filter>-->
-<!--        </service>-->
+        <activity android:name=".success" />
+        <activity android:name=".profile" />
+        <activity android:name=".question" />
+        <activity android:name=".quesview" />
+        <activity android:name=".gov" />
+        <activity android:name=".votes" />
     </application>
 
 </manifest>

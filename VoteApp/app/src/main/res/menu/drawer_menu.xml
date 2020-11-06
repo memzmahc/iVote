@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/user_nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Home"/>
+
+        <item android:id="@+id/user_nav_submit"
+            android:icon="@drawable/submit"
+            android:title="Submit Form"/>
+        <item
+            android:id="@+id/user_nav_update"
+            android:icon="@drawable/ic_updated"
+            android:title="Update Sit Position" />
+
+        <item
+            android:id="@+id/user_nav_profile"
+            android:icon="@drawable/ic_person"
+            android:title="Profile" />
+
+        <item android:id="@+id/customer_nav_signout"
+            android:icon="@drawable/ic_powe"
+            android:title="SignOut"/>
+    </group>
+
+    <item android:title="More...">
+        <menu>
+            <item android:id="@+id/user_nav_share"
+                android:icon="@drawable/ic_share"
+                android:title="Share"/>
+            <item android:id="@+id/user_nav_send"
+                android:icon="@drawable/ic_send"
+                android:title="Send App"/>
+        </menu>
+    </item>
+
+</menu>
