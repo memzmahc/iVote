@@ -49,13 +49,13 @@ public class CandidateMainActivity extends AppCompatActivity {
         TextView user= headerView.findViewById(R.id.nav_header_name);
         TextView phone= headerView.findViewById(R.id.nav_header_phone);
         CircleImageView profile_img= headerView.findViewById(R.id.user_profile_image);
-/*
+
         user.setText(Prevalent.currentOnlineUser.getName());
         phone.setText(Prevalent.currentOnlineUser.getPhone());
 
         Glide.with(this).load(Prevalent.currentOnlineUser.getImage()).into(profile_img);
 
- */
+
 
         setNavigation(toolbar);
 

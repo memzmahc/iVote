@@ -64,6 +64,8 @@ public class SubmitFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_submit, container, false);
 
         fname=view.findViewById(R.id.upload_fullname);
+        fname.setEnabled(false);
+        fname.setText(Prevalent.currentOnlineUser.getName());
         idno=view.findViewById(R.id.upload_idnumber);
         regno=view.findViewById(R.id.upload_regnumber);
         depart=view.findViewById(R.id.upload_department);
@@ -91,7 +93,7 @@ public class SubmitFragment extends Fragment {
     }
 
     private void Validate() {
-        String mfname = fname.getText().toString().trim();
+        String mfname = Prevalent.currentOnlineUser.getName();
         String mid = idno.getText().toString().trim();
         String mregno = regno.getText().toString().trim();
         String mdepart = depart.getText().toString().trim();
@@ -152,42 +154,36 @@ public class SubmitFragment extends Fragment {
 
                 //change 123 to Prevalent.currentOnlineUser.getPhone()
 
-                if (!(dataSnapshot.child("CandidateForms").child("123").exists()))
+                if (!(dataSnapshot.child("Forms_Submitted").child(Prevalent.currentOnlineUser.getPhone()).exists()))
                 {
                     StorageReference mStorageRef;
                     mStorageRef = FirebaseStorage.getInstance().getReference().child("FormImages");
                     final StorageReference filereference = mStorageRef.child(System.currentTimeMillis()
                             + "." + getFileExtension(filePath));
 
-                    filereference.putFile(filePath).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                        @Override
-                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                            Toast.makeText(getActivity(), "image Uploaded", Toast.LENGTH_LONG).show();
-                            filereference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                                @Override
-                                public void onSuccess(Uri uri) {
-                                    final Uri umageuri = uri;
-                                    String imge = umageuri.toString();
+                    filereference.putFile(filePath).addOnSuccessListener(taskSnapshot -> {
+                        Toast.makeText(getActivity(), "image Uploaded", Toast.LENGTH_LONG).show();
+                        filereference.getDownloadUrl().addOnSuccessListener(uri -> {
+                            final Uri umageuri = uri;
+                            String imge = umageuri.toString();
 
-                                    FormModelClass uploadtaskform = new FormModelClass(mfname,mid,mregno,mdepart,mdescr,mlocation,mseat,imge);
+                            FormModelClass uploadtaskform = new FormModelClass(mfname,mid,mregno,mdepart,mdescr,mlocation,mseat,imge,"Pending");
 
-                                    RootRef.child("Voter").child("phone").setValue(uploadtaskform)
-                                            .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                                @Override
-                                                public void onComplete(@NonNull Task<Void> task) {
-                                                    Toast.makeText(getActivity(), "Form Submitted Sucessfully", Toast.LENGTH_SHORT).show();
-                                                    loadingBar.dismiss();
+                            RootRef.child("Forms_Submitted").child(Prevalent.currentOnlineUser.getPhone()).setValue(uploadtaskform)
+                                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task) {
+                                            Toast.makeText(getActivity(), "Form Submitted Sucessfully", Toast.LENGTH_SHORT).show();
+                                            loadingBar.dismiss();
 
-                                                    getActivity().getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.fragment_container_admin,
-                                                            new Myforms()).commit();
+                                            getActivity().getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.fragment_container_admin,
+                                                    new Myforms()).commit();
 
-                                                }
-                                            });
+                                        }
+                                    });
 
-                                }
-                            });
+                        });
 
-                        }
                     });
 
 

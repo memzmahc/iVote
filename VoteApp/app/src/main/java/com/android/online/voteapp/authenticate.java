@@ -17,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.online.voteapp.Candidate.CandidateMainActivity;
 import com.android.online.voteapp.Session.Prevalent;
+import com.android.online.voteapp.Session.UserType;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
@@ -92,9 +93,9 @@ public class authenticate extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // LoginUser();
+              LoginUser();
 
-                startActivity(new Intent(getApplicationContext(), CandidateMainActivity.class));
+                //startActivity(new Intent(getApplicationContext(), CandidateMainActivity.class));
             }
         });
     }
@@ -137,6 +138,7 @@ public class authenticate extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.child(parentDbName).child(phone).exists()) {
                     UserClassModel usersData = dataSnapshot.child(parentDbName).child(phone).getValue(UserClassModel.class);
+                    UserType userType= new UserType(parentDbName);
 
                     if (usersData.getPhone().equals(phone)) {
                         if (usersData.getPassword().equals(password)) {
@@ -146,6 +148,7 @@ public class authenticate extends AppCompatActivity {
 
                                 Intent intent = new Intent(authenticate.this, CandidateMainActivity.class);
                                 Prevalent.currentOnlineUser = usersData;
+                                Prevalent.currentUserType = userType;
                                 startActivity(intent);
                             } else if (parentDbName.equals("Voter")) {
                                 Toast.makeText(authenticate.this, "Welcome , you are logged in Successfully...", Toast.LENGTH_SHORT).show();

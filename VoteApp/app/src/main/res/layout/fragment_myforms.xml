@@ -1,16 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="5dp"
-        android:gravity="center"
-        android:text="Submit a form first"
-        android:textAlignment="center"
-        android:textSize="40sp" />
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/inputs"
+            android:text="My Submitted Forms"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textSize="20sp"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/myforms_rv"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/myforms_notfound"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:text="Submit a form first"
+            android:textAlignment="center"
+            android:textSize="40sp" />
+
+    </LinearLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>

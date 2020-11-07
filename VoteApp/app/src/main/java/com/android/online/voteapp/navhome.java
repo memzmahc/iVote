@@ -26,6 +26,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.android.online.voteapp.Session.Prevalent;
 import com.google.android.material.navigation.NavigationView;
 
 public class navhome extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -37,7 +38,7 @@ public class navhome extends AppCompatActivity implements NavigationView.OnNavig
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navhome);
         tvemail = (TextView) findViewById(R.id.dtext);
-        tvemail.setText(getIntent().getExtras().getString("Email"));
+        tvemail.setText(Prevalent.currentOnlineUser.getName());
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
