@@ -16,8 +16,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class list extends AppCompatActivity {
 
     ListView mlistview;
-    int[] images = {R.drawable.pres,R.drawable.gov};
-    String[] names = {"President","Sec General"};
+    int[] images = {R.drawable.pres,R.drawable.gov,R.drawable.gov};
+    String[] names = {"President","Sec General","Faculty Head"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +36,10 @@ public class list extends AppCompatActivity {
                     case 1:
                         Intent b = new Intent(getApplicationContext(),gov.class);
                         startActivity(b);
+                        break;
+                    case 2:
+                        Intent c = new Intent(getApplicationContext(), Heads.class);
+                        startActivity(c);
                         break;
                 }
             }

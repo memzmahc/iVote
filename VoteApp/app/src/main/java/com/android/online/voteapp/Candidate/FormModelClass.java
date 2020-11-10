@@ -5,14 +5,14 @@ package com.android.online.voteapp.Candidate;
  * on 06/11/2020 14:35 2020
  */
 public class FormModelClass {
-    String name,idnumber,renumber,department,description,location,seat,imageurl,status;
+    String name,idnumber,renumber,department,description,location,seat,imageurl,status,phone,userimageurl;
 
 
    public FormModelClass(){
 
     }
 
-    public FormModelClass(String name, String idnumber, String renumber, String department, String description, String location, String seat, String imageurl, String status) {
+    public FormModelClass(String name, String idnumber, String renumber, String department, String description, String location, String seat, String imageurl, String status, String phone, String userimageurl) {
         this.name = name;
         this.idnumber = idnumber;
         this.renumber = renumber;
@@ -22,6 +22,24 @@ public class FormModelClass {
         this.seat = seat;
         this.imageurl = imageurl;
         this.status = status;
+        this.phone = phone;
+        this.userimageurl = userimageurl;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getUserimageurl() {
+        return userimageurl;
+    }
+
+    public void setUserimageurl(String userimageurl) {
+        this.userimageurl = userimageurl;
     }
 
     public String getStatus() {

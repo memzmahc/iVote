@@ -167,7 +167,7 @@ public class SubmitFragment extends Fragment {
                             final Uri umageuri = uri;
                             String imge = umageuri.toString();
 
-                            FormModelClass uploadtaskform = new FormModelClass(mfname,mid,mregno,mdepart,mdescr,mlocation,mseat,imge,"Pending");
+                            FormModelClass uploadtaskform = new FormModelClass(mfname,mid,mregno,mdepart,mdescr,mlocation,mseat,imge,"Pending",Prevalent.currentOnlineUser.getPhone(),Prevalent.currentOnlineUser.getImage());
 
                             RootRef.child("Forms_Submitted").child(Prevalent.currentOnlineUser.getPhone()).setValue(uploadtaskform)
                                     .addOnCompleteListener(new OnCompleteListener<Void>() {

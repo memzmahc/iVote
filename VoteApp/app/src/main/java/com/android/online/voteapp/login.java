@@ -7,6 +7,8 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.android.online.voteapp.Verification.MainActivityAuthenticate;
+
 public class login extends AppCompatActivity {
 
     @Override

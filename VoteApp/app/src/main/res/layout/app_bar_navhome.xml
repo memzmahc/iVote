@@ -25,5 +25,4 @@
     <include layout="@layout/content_navhome" />
 
 
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,34 +1,42 @@
 {
   "project_info": {
-    "project_number": "8731362877",
-    "firebase_url": "https://voteapp-76567.firebaseio.com",
-    "project_id": "voteapp-76567",
-    "storage_bucket": "voteapp-76567.appspot.com"
+    "project_number": "875404120087",
+    "firebase_url": "https://voteapp-d843c.firebaseio.com",
+    "project_id": "voteapp-d843c",
+    "storage_bucket": "voteapp-d843c.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:8731362877:android:88fd479830ce7e0e3bcc54",
+        "mobilesdk_app_id": "1:875404120087:android:1ed7a2a45c5d0d73be4c52",
         "android_client_info": {
           "package_name": "com.android.online.voteapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "8731362877-4m5tusjii9gb5o8p38ne2114i7ekum6o.apps.googleusercontent.com",
+          "client_id": "875404120087-rtiugdr1nvfbp4s8ntgng5fg48bgnu3o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.android.online.voteapp",
+            "certificate_hash": "430f439c9f141977457972fbfa541c97cc72762e"
+          }
+        },
+        {
+          "client_id": "875404120087-1d6fv6f7qhfih77tp8vqn8205teltrbp.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyA7zIeRXSyMCMGWdpfcHXQVNjizatdT4wI"
+          "current_key": "AIzaSyDxu930bpLFa0P0LCzRYPo9bf4qKipJAZ8"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "8731362877-4m5tusjii9gb5o8p38ne2114i7ekum6o.apps.googleusercontent.com",
+              "client_id": "875404120087-1d6fv6f7qhfih77tp8vqn8205teltrbp.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
