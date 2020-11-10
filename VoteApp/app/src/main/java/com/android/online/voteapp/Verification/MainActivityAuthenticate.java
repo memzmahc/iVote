@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.android.online.voteapp.R;
+import com.android.online.voteapp.Session.Prevalent;
 import com.android.online.voteapp.navhome;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
@@ -23,6 +24,9 @@ public class MainActivityAuthenticate extends AppCompatActivity {
 
         editTextCountryCode = findViewById(R.id.editTextCountryCode);
         editTextPhone = findViewById(R.id.editTextPhone);
+        editTextPhone.setEnabled(false);
+        editTextCountryCode.setEnabled(false);
+        editTextPhone.setText(Prevalent.currentOnlineUser.getPhone());
         buttonContinue = findViewById(R.id.buttonContinue);
 
         buttonContinue.setOnClickListener(new View.OnClickListener() {
